@@ -37,15 +37,25 @@ class _MovieListViewState extends State<MovieListView> {
             elevation: 4.5,
             color: Colors.white,
             child: ListTile(
-              leading: const CircleAvatar(
-                child: Text("B"),
+              leading: CircleAvatar(
+                child: Container(
+                  width: 200,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(_movieList[index].images[0]),
+                        fit: BoxFit.cover
+                      ),
+                      borderRadius: BorderRadius.circular(14.0)
+                    ),
+                ),
               ),
               trailing: Text("..."),
               title: Text(_movieList[index].title),
               subtitle: Text("Sub"),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return MovieDetailView(movieName: _movieList[index].title);
+                  return MovieDetailView(movie: _movieList[index]);
                 })
                 );
               },
