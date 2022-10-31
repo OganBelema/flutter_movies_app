@@ -43,9 +43,16 @@ class _MovieListViewState extends State<MovieListView> {
         itemCount: _movies.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
+            elevation: 4.5,
             color: Colors.white,
             child: ListTile(
+              leading: const CircleAvatar(
+                child: Text("B"),
+              ),
+              trailing: Text("..."),
               title: Text(_movies[index]),
+              subtitle: Text("Sub"),
+              onTap: () => debugPrint("Movie name: ${_movies[index]}"),
             ),
           );
         },
