@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies_app/ui/movie_detail_view.dart';
 
+import '../data/movie.dart';
+
 class MovieListView extends StatefulWidget {
   const MovieListView({super.key});
 
@@ -10,19 +12,7 @@ class MovieListView extends StatefulWidget {
 
 class _MovieListViewState extends State<MovieListView> {
 
-  final List _movies = [
-    "Titanic",
-    "Blade Runner",
-    "Rambo",
-    "The Avengers",
-    "Avatar",
-    "I Am Legend",
-    "300",
-    "The Wolf of Wall Street",
-    "Interstellar",
-    "Game of Thrones",
-    "Vikings"
-  ];
+  final List<Movie> _movieList = Movie.getMovies();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +31,7 @@ class _MovieListViewState extends State<MovieListView> {
       ),
       backgroundColor: Colors.blueGrey.shade400,
       body: ListView.builder(
-        itemCount: _movies.length,
+        itemCount: _movieList.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
             elevation: 4.5,
@@ -51,11 +41,11 @@ class _MovieListViewState extends State<MovieListView> {
                 child: Text("B"),
               ),
               trailing: Text("..."),
-              title: Text(_movies[index]),
+              title: Text(_movieList[index].title),
               subtitle: Text("Sub"),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return MovieDetailView(movieName: _movies[index]);
+                  return MovieDetailView(movieName: _movieList[index].title);
                 })
                 );
               },
