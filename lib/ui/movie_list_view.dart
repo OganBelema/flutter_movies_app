@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_movies_app/ui/movie_detail_view.dart';
 
 class MovieListView extends StatefulWidget {
   const MovieListView({super.key});
@@ -52,7 +53,12 @@ class _MovieListViewState extends State<MovieListView> {
               trailing: Text("..."),
               title: Text(_movies[index]),
               subtitle: Text("Sub"),
-              onTap: () => debugPrint("Movie name: ${_movies[index]}"),
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return MovieDetailView();
+                })
+                );
+              },
             ),
           );
         },
