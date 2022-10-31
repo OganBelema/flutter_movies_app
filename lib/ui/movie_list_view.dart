@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies_app/ui/movie_detail_view.dart';
+import 'package:flutter_movies_app/ui/movie_image.dart';
 
 import '../data/movie.dart';
+import 'movie_card.dart';
 
 class MovieListView extends StatefulWidget {
   const MovieListView({super.key});
@@ -33,7 +35,12 @@ class _MovieListViewState extends State<MovieListView> {
       body: ListView.builder(
         itemCount: _movieList.length,
         itemBuilder: (BuildContext context, int index) {
-          return movieCard(_movieList[index], context);
+          return Stack(children: [
+            movieCard(_movieList[index], context),
+            Positioned(
+                top: 10,
+                child: movieImage(_movieList[index].images[0]))
+          ]);
           /*Card(
             elevation: 4.5,
             color: Colors.white,
@@ -64,43 +71,6 @@ class _MovieListViewState extends State<MovieListView> {
           );*/
         },
       )
-    );
-  }
-
-  Widget movieCard(Movie movie, BuildContext context) {
-    return InkWell(
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 120.0,
-        child: Card(
-          color: Colors.black45,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 8.0, left: 54.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text(movie.title),
-                    Text("Rating: ${movie.imdbRating} / 10"),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text("Released: ${movie.released}"),
-                    Text(movie.runtime),
-                    Text(movie.rated)
-                  ],
-                )
-              ],
-            ),
-          ),
-        ),
-      ),
-      onTap: () => debugPrint(movie.title),
     );
   }
 }
