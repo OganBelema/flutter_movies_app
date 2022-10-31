@@ -30,7 +30,7 @@ class _MovieListViewState extends State<MovieListView> {
         title: const Text("Movies"),
         backgroundColor: Colors.blueGrey.shade900,
       ),
-      backgroundColor: Colors.blueGrey.shade400,
+      backgroundColor: Colors.blueGrey.shade900,
       body: ListView.builder(
         itemCount: _movieList.length,
         itemBuilder: (BuildContext context, int index) {
