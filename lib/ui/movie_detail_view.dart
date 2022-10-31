@@ -15,7 +15,7 @@ class MovieDetailView extends StatelessWidget {
           child: ElevatedButton(
             child: Text("Go back"),
             onPressed: (){
-
+              Navigator.pop(context);
             },
           ),
         ),
