@@ -55,7 +55,7 @@ class _MovieListViewState extends State<MovieListView> {
               subtitle: Text("Sub"),
               onTap: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context){
-                  return MovieDetailView();
+                  return MovieDetailView(movieName: _movies[index]);
                 })
                 );
               },

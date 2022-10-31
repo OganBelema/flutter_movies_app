@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 class MovieDetailView extends StatelessWidget {
-  const MovieDetailView({Key? key}) : super(key: key);
+  const MovieDetailView({Key? key, required this.movieName}) : super(key: key);
+
+  final String movieName;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Movies"),
+        title: Text(movieName),
         backgroundColor: Colors.blueGrey.shade900,
       ),
       body: Container(
