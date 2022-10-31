@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies_app/data/movie.dart';
+import 'package:flutter_movies_app/ui/movie_details_thumbnail.dart';
 
 class MovieDetailView extends StatelessWidget {
   const MovieDetailView({Key? key, required this.movie}) : super(key: key);
@@ -13,7 +14,12 @@ class MovieDetailView extends StatelessWidget {
         title: Text(movie.title),
         backgroundColor: Colors.blueGrey.shade900,
       ),
-      body: Container(
+      body: ListView(
+        children: [
+          MovieDetailsThumbnail(thumbnail: movie.images[0])
+        ],
+      )
+      /*Container(
         child: Center(
           child: ElevatedButton(
             child: Text("Go back"),
@@ -22,7 +28,7 @@ class MovieDetailView extends StatelessWidget {
             },
           ),
         ),
-      ),
+      ),*/
     );
   }
 }

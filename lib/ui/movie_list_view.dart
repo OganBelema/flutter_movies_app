@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_movies_app/ui/movie_image.dart';
+import 'package:flutter_movies_app/ui/components/movie_image.dart';
 
 import '../data/movie.dart';
-import 'movie_card.dart';
+import 'components/movie_card.dart';
 
 class MovieListView extends StatefulWidget {
   const MovieListView({super.key});
