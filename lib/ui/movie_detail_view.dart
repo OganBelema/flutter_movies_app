@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movies_app/data/movie.dart';
+import 'package:flutter_movies_app/ui/movie_details_header_with_poster.dart';
 import 'package:flutter_movies_app/ui/movie_details_thumbnail.dart';
 
 class MovieDetailView extends StatelessWidget {
@@ -16,19 +17,10 @@ class MovieDetailView extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          MovieDetailsThumbnail(thumbnail: movie.images[0])
+          MovieDetailsThumbnail(thumbnail: movie.images[0]),
+          MovieDetailsHeaderWithPoster(movie: movie)
         ],
       )
-      /*Container(
-        child: Center(
-          child: ElevatedButton(
-            child: Text("Go back"),
-            onPressed: (){
-              Navigator.pop(context);
-            },
-          ),
-        ),
-      ),*/
     );
   }
 }
