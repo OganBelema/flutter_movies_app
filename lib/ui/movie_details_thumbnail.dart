@@ -25,6 +25,14 @@ class MovieDetailsThumbnail extends StatelessWidget {
             ),
             Icon(Icons.play_circle_outline, size: 100, color: Colors.white,)
           ],
+        ),
+        Container(
+          decoration: BoxDecoration(
+            gradient: RadialGradient(colors: [
+              Color(0x00f5f5f5), Color(0xfff5f5f5)
+            ],radius: 0.9 ),
+          ),
+          height: 190,
         )
       ],
     );
