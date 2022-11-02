@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_movies_app/data/movie.dart';
 import 'package:flutter_movies_app/ui/movie_poster.dart';
 
+import 'movie_details_header.dart';
+
 class MovieDetailsHeaderWithPoster extends StatelessWidget {
   const MovieDetailsHeaderWithPoster({Key? key, required this.movie}) : super(key: key);
 
@@ -13,7 +15,9 @@ class MovieDetailsHeaderWithPoster extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16.0),
       child: Row(
         children: [
-          MoviePoster(poster: movie.images[0])
+          MoviePoster(poster: movie.images[0]),
+          const SizedBox(width: 16,),
+          Expanded(child: MovieDetailsHeader(movie: movie))
         ],
       ),
     );
