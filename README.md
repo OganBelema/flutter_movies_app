@@ -6,13 +6,13 @@ A Flutter Movie App project based on Udemy course => Build Flutter iOS and Andro
 
 <p align="middle">
 <a href="https://youtube.com/shorts/eUeJnf-cD2w" 
-target="_blank"><img src="screenshots/android2.png"
+target="_blank"><img src="https://www.kindpng.com/picc/m/4-42488_download-play-button-png-photos-youtube-play-button.png"
 alt="Android demo video" width="560" height="315" border="10" /></a>
 </p>
 
 <p align="middle">
     <a href="https://youtube.com/shorts/mmf61MQbomo" 
-target="_blank"><img src="screenshots/ios2.png"
+target="_blank"><img src="https://www.kindpng.com/picc/m/4-42488_download-play-button-png-photos-youtube-play-button.png"
 alt="iOS demo video" width="560" height="315" border="10" /></a>
 </p>
 
