@@ -1,16 +1,23 @@
-# flutter_movies_app
+# Flutter Movies Aap
 
-A new Flutter project.
+A Flutter Movie App project based on Udemy course => Build Flutter iOS and Android Apps with a Single Codebase: Learn Google's Flutter Mobile Development Framework & Dart.
 
-## Getting Started
+## Screenshots and Videos
 
-This project is a starting point for a Flutter application.
+<p align="middle">
+    <img src="screenshots/android.webm" width="200" height="400">
+</p>
 
-A few resources to get you started if this is your first Flutter project:
+<p align="middle">
+    <img src="screenshots/ios.mp4" width="200" height="400">
+</p>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<p align="middle">
+    <img src="screenshots/android2.png" width="200" height="400"> 
+    <img src="screenshots/ios2.png" width="200" height="400"> 
+</p>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p align="middle">
+    <img src="screenshots/android2.png" width="200" height="400"> 
+    <img src="screenshots/ios2.png" width="200" height="400"> 
+</p>
