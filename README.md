@@ -1,4 +1,4 @@
-# Flutter Movies Aap
+# Flutter Movies App
 
 A Flutter Movie App project based on Udemy course => Build Flutter iOS and Android Apps with a Single Codebase: Learn Google's Flutter Mobile Development Framework & Dart.
 
