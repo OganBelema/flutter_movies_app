@@ -17,8 +17,8 @@ alt="iOS demo video" width="200" height="100" /></a>
 </p>
 
 <p align="middle">
-    <img src="screenshots/android2.png" width="200" height="400"> 
-    <img src="screenshots/ios2.png" width="200" height="400"> 
+    <img src="screenshots/android_i.png" width="200" height="400"> 
+    <img src="screenshots/ios_i.png" width="200" height="400"> 
 </p>
 
 <p align="middle">
